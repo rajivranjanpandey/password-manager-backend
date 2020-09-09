@@ -1,0 +1,20 @@
+{
+  "name": "personal-password-manager",
+  "version": "1.0.0",
+  "description": "\"Manage all your password through a single vault\"",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
