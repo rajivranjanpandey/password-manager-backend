@@ -1,8 +1,10 @@
 const express = require('express');
-const userController = require('../controllers/usersController');
+const usersController = require('../middlewares/controllers/usersController');
+const usersValidator = require('../middlewares/validators/usersValidator');
+
 const router = express.Router();
 
-router.post('/send-otp', userController.sendOtpController);
-router.post('/verify-otp', userController.verifyOtpController);
+router.post('/send-otp', usersValidator.validateSendOtpInput, usersController.sendOtpController);
+router.post('/verify-otp', usersValidator.validateVerifyOtpInput, usersController.verifyOtpController);
 
 module.exports = router;
